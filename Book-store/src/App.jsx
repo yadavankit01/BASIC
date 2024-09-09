@@ -96,7 +96,7 @@ function App() {
               </div>
             </div>
           ) : (
-            <div>
+            <div className="list">
               <div>
                 <table className="table table-dark">
                   <thead>
