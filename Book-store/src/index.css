@@ -1,0 +1,11 @@
+@media screen  and(max-width:667px){
+  body input,th,td,h1{
+   font-size: 12px;
+  }
+}
+
+@media screen  and(max-width:667px){
+ body{
+  font-size: 10px;
+ }
+}
