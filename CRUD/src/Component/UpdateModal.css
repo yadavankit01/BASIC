@@ -1,0 +1,106 @@
+/* Custom Modal Header with Gradient */
+.custom-modal-header {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-modal-header .btn-close {
+  color: white;
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+.custom-modal-header .btn-close:hover {
+  color: #ffcc00;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Modal Body Styling */
+.modal-body {
+  background-color: #f7f9fc;
+  padding: 30px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: 10px;
+  border: 2px solid #007bff;
+  padding: 15px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Button Styling */
+.btn-block {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn-block:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Modal Spacing */
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.py-2 {
+  padding: 10px 0;
+}
+
+/* Image Upload Styling */
+.form-control[type="file"] {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+}
+
+.form-control[type="file"]:hover {
+  border-color: #00c6ff;
+}
+.btn-custom {
+  padding: 10px 30px;
+  background-color: #ff4757; /* Attractive red color */
+  border-color: #ff4757;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(255, 71, 87, 0.4); /* Soft shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: #e84118; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+

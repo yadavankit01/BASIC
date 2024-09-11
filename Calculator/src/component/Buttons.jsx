@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Calculatorcontaxt } from "../context/Calculatorcontext";
 
 function Buttons() {
-  const { calc, buttonval, buttonNames } = useContext(Calculatorcontaxt);
+  const { calc, buttonval } = useContext(Calculatorcontaxt);
   const getButtonClass = (value) => {
     if (value === "=") {
       return "equals";

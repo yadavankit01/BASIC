@@ -1,0 +1,119 @@
+/* Modal Header */
+.custom-modal-header {
+  background: linear-gradient(135deg, #007bff 0%, #00c6ff 100%);
+  color: white;
+  border-bottom: none;
+}
+
+.modal-title-custom {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white;
+}
+
+/* Modal Body */
+.modal-body-custom {
+  text-align: center;
+  padding: 30px;
+  background-color: #f0f4f8;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.user-image {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 10px 30px rgba(0, 123, 255, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.user-image:hover {
+  transform: scale(1.05);
+}
+
+.user-details h6 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+.user-details span {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.user-details a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.user-details a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Modal Footer */
+.custom-modal-footer {
+  background-color: #f0f4f8;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btn-custom {
+  padding: 10px 30px;
+  background-color: #007bff;
+  border-color: #007bff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+/* Close Icon (X Button) */
+.custom-modal-header .btn-close {
+  color: white !important;
+  font-size: 1.5rem;
+  opacity: 1; /* Make it fully visible */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-modal-header .btn-close:hover {
+  color: #ffc107; /* Change color on hover */
+  transform: rotate(90deg); /* Rotate on hover for a cool effect */
+}
+
+/* Close Button */
+.btn-custom {
+  padding: 10px 30px;
+  background-color: #ff4757; /* Attractive red color */
+  border-color: #ff4757;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px rgba(255, 71, 87, 0.4); /* Soft shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background-color: #e84118; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
