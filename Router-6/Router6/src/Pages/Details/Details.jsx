@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   useNavigate,
   useOutletContext,
@@ -9,6 +9,7 @@ import { List as DummyData } from "../List/data";
 
 import "./style.css";
 function Details() {
+ 
   const param = useParams();
   const [SearchParam, setSearchParam] = useSearchParams();
   const data = DummyData.find(

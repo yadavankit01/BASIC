@@ -1,9 +1,34 @@
 import React from "react";
 import "./style.css";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation, Link } from "react-router-dom";
+import { useEffect } from "react";
 
 function Header() {
   const nevigate = useNavigate();
+
+  const location = useLocation();
+
+  // useEffect(() => {
+  //   CreateBreadCrum();
+  // }, [location.pathname]);
+
+  function CreateBreadCrum() {
+    const path = location.pathname.split("/");
+    let currentpath = "";
+    const BreadCoumbjSX = path
+      .filter((p) => !!p)
+      .map((p) => {
+        currentpath += `${p}/`;
+        return (
+          <Link key={p} to={currentpath}>
+            {" "}
+            {`${p}`}
+          </Link>
+        );
+      });
+    return BreadCoumbjSX;
+  }
+
   const handalBack = () => {
     console.log("Redirect ");
     nevigate(-1);
@@ -79,6 +104,10 @@ function Header() {
         <button onClick={handalBack}>Back</button>
 
         <button onClick={handalForword}>Forword</button>
+      </div>
+      <div>
+        <h1>BreadCrumb</h1>
+        {CreateBreadCrum()}
       </div>
     </>
   );

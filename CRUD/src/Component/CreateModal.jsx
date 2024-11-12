@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./CreateModal.css";
 
-function CreateModal({ state, fun, loadUsers }) {    
+function CreateModal({ state, fun, loadUsers }) {
   const initialstate = {
     Name: { value: "", IsValid: true },
     Username: { value: "", IsValid: true },
@@ -52,12 +52,20 @@ function CreateModal({ state, fun, loadUsers }) {
   const handlsubmit = async (e) => {
     e.preventDefault();
     const IsNameValid = inputs.Name.value.length > 3;
-    const IsUserNameValid = inputs.Username.value.length > 5;
+    const IsUserNameValid = inputs.Username.value.length > 3;
     const IsEmailValid = inputs.Email.value.length > 5;
     const IsNumberValid = inputs.Number.value.length > 9;
     const IsWebsiteValid = inputs.Website.value.length > 5;
     const IsPassword = inputs.Password.value.length > 5;
     const IsImageValid = !!inputs.Image.value;
+
+    // console.log("IsNameValid:", IsNameValid);
+    // console.log("IsUserNameValid:", IsUserNameValid);
+    // console.log("IsEmailValid:", IsEmailValid);
+    // console.log("IsNumberValid:", IsNumberValid);
+    // console.log("IsWebsiteValid:", IsWebsiteValid);
+    // console.log("IsPassword:", IsPassword);
+    // console.log("IsImageValid:", IsImageValid);
 
     if (
       !IsEmailValid ||
@@ -99,7 +107,7 @@ function CreateModal({ state, fun, loadUsers }) {
       console.log("error in data post", error.message);
     }
   };
-   
+
   return (
     <Modal
       show={state}

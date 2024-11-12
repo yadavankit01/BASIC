@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Pages/Header/Header";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -9,6 +9,8 @@ import Details from "./Pages/Details/Details";
 import Outside from "./Pages/Outside/Outside";
 // import Nested from "./Pages/Nested/Nested";
 // import NRC from "./Pages/NestedComponent/NRC";
+import Actor from "./Pages/Actor/Actor";
+import Procted from "./Pages/ProctedRoute/Procted";
 
 function App() {
   return (
@@ -19,8 +21,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
 
-          <Route path="/List" element={<List />} />
-          <Route path="Details/:movieId" element={<Details />} />
+          <Route path="/List" element={<Procted />}>
+            <Route index element={<List />} />
+            <Route path="/List/Details/:movieId">
+              <Route index element={<Details />} />
+              <Route path="Actor" element={<Actor />} />
+            </Route>
+          </Route>
 
           <Route path="/Outside" element={<Outside />} />
           {/* <Route path="/Nested" element={<Nested />}>

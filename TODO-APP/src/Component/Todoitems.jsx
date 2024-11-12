@@ -9,8 +9,8 @@ function Todoitems({ tododata }) {
   const CompleteToggle = () => {
     Completed(tododata.id);
   };
-  const edittodo = () => {
-    updatetodo(tododata.id, { ...tododata, task: todomsg, tododate: tododate });
+  const edittodo = (id) => {
+    updatetodo(id, { ...tododata, task: todomsg, tododate: tododate });
     setIsTodoEditable(false);
   };
   return (
@@ -50,7 +50,7 @@ function Todoitems({ tododata }) {
             if (tododata.completed) return;
 
             if (isTodoEditable) {
-              edittodo();
+              edittodo(tododata.id);
             } else setIsTodoEditable((prev) => !prev);
           }}
           disabled={tododata.completed}
