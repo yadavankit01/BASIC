@@ -5,7 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import "./CreateModal.css";
 
-function CreateModal({ state, fun, loadUsers }) {
+function CreateModal({ state, fun, loadUsers }) {    
   const initialstate = {
     Name: { value: "", IsValid: true },
     Username: { value: "", IsValid: true },
@@ -99,9 +99,15 @@ function CreateModal({ state, fun, loadUsers }) {
       console.log("error in data post", error.message);
     }
   };
-
+   
   return (
-    <Modal show={state} onHide={fun} centered>
+    <Modal
+      show={state}
+      onHide={fun}
+      centered
+      backdrop="static" // Prevents modal from closing when clicking outside
+      keyboard={false} // Prevents modal from closing with the Escape key
+    >
       <Modal.Header closeButton className="custom-modal-header">
         <Modal.Title>Create User</Modal.Title>
       </Modal.Header>

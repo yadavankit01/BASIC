@@ -1,0 +1,61 @@
+/* Styling for the unordered list */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  background-color: #5e5ee1;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+ul li {
+  margin: 0 15px;
+}
+
+
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 8px;
+  background-color: transparent;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-bf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.btn-bf button {
+  color: #fff;
+  background-color: #5e5ee1;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+/* Active link styling */
+ul li a.active {
+  color: #5e5ee1;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+ul li a.active::after {
+  width: 100%;
+  left: 0;
+}

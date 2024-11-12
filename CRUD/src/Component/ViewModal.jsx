@@ -17,11 +17,17 @@ function ViewModal({ state, fun, userId }) {
   };
 
   useEffect(() => {
-    getuser(userId);
+    +getuser(userId);
   }, [userId]);
 
   return (
-    <Modal show={state} onHide={fun} centered>
+    <Modal
+      show={state}
+      onHide={fun}
+      centered
+      backdrop="static" // Prevents modal from closing when clicking outside
+      keyboard={false} // Prevents modal from closing with the Escape key
+    >
       <Modal.Header closeButton className="custom-modal-header">
         <Modal.Title className="modal-title-custom">User Details</Modal.Title>
       </Modal.Header>

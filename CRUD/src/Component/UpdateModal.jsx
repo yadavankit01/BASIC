@@ -118,7 +118,13 @@ function UpdateModal({ state, fun, userId }) {
   }, [userId]);
 
   return (
-    <Modal show={state} onHide={fun} centered>
+    <Modal
+      show={state}
+      onHide={fun}
+      centered
+      backdrop="static" // Prevents modal from closing when clicking outside
+      keyboard={false} // Prevents modal from closing with the Escape key
+    >
       <Modal.Header closeButton className="custom-modal-header">
         <Modal.Title>Update Details</Modal.Title>
       </Modal.Header>

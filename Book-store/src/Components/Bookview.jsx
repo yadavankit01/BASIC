@@ -7,8 +7,8 @@ function Bookview({ Bookdata, index }) {
   const [isbn, setisbn] = useState(Bookdata.ISBN);
   const [isEditable, setIsEditable] = useState(false);
   const { update, remove } = useContext(BookContext);
-  const Update = () => {
-    update(Bookdata.id, {
+  const Update = () => {       
+    update(Bookdata.id, {                  
       ...Bookdata,
       title: title.value,
       Author: Author.value,

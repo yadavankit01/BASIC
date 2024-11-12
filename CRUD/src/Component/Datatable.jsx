@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import axios from "axios";
 import CreateModal from "./CreateModal";
 import UpdateModal from "./UpdateModal";
 import ViewModal from "./ViewModal";
 import "./Datatable.css";
+
+// const ViewModal = lazy(() => {
+//   return import("./ViewModal");
+// });
 
 function Datatable() {
   const [modal, setmodal] = useState(false);
@@ -11,9 +15,10 @@ function Datatable() {
   const [modal3, setmodal3] = useState(false);
   const [selectedUserId, setSelectedUserId] = useState(null); // State to hold selected user ID
   const [users, setusers] = useState([]);
-
+  const [con, setcon] = useState(false);
   const handelmodal = () => {
     setmodal(true);
+    setcon(true);
   };
 
   const handelmodal2 = (userId) => {
@@ -23,6 +28,7 @@ function Datatable() {
 
   const handelmodal3 = (userId) => {
     setSelectedUserId(userId);
+    console.log("UserId", userId);
     setmodal3(true);
   };
 
@@ -156,7 +162,14 @@ function Datatable() {
         userId={selectedUserId}
         loadUsers={loadUsers}
       />
+
       <ViewModal state={modal3} fun={hidemodal3} userId={selectedUserId} />
+      {/* lazy loading and coad spliting */}
+      {/* {con && (
+        <Suspense>
+          <ViewModal state={modal3} fun={hidemodal3} userId={selectedUserId} />
+        </Suspense>
+      )} */}
     </>
   );
 }

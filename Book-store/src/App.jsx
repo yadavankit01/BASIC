@@ -30,6 +30,8 @@ function App() {
 
   const submit = (e) => {
     e.preventDefault();
+    if (!inputs.title.value || !inputs.Author.value || !inputs.ISBN.value)
+      return;
     add({
       title: inputs.title.value,
       Author: inputs.Author.value,

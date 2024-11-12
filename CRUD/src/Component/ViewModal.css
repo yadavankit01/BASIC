@@ -88,32 +88,40 @@
   background-color: #0056b3;
   transform: translateY(-3px);
 }
+
 /* Close Icon (X Button) */
 .custom-modal-header .btn-close {
   color: white !important;
   font-size: 1.5rem;
-  opacity: 1; /* Make it fully visible */
+  opacity: 1;
+  /* Make it fully visible */
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .custom-modal-header .btn-close:hover {
-  color: #ffc107; /* Change color on hover */
-  transform: rotate(90deg); /* Rotate on hover for a cool effect */
+  color: #ffc107;
+  /* Change color on hover */
+  transform: rotate(90deg);
+  /* Rotate on hover for a cool effect */
 }
 
 /* Close Button */
 .btn-custom {
   padding: 10px 30px;
-  background-color: #ff4757; /* Attractive red color */
+  background-color: #ff4757;
+  /* Attractive red color */
   border-color: #ff4757;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 30px;
-  box-shadow: 0px 4px 10px rgba(255, 71, 87, 0.4); /* Soft shadow */
+  box-shadow: 0px 4px 10px rgba(255, 71, 87, 0.4);
+  /* Soft shadow */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-custom:hover {
-  background-color: #e84118; /* Darker shade on hover */
-  transform: translateY(-3px); /* Lift effect on hover */
+  background-color: #e84118;
+  /* Darker shade on hover */
+  transform: translateY(-3px);
+  /* Lift effect on hover */
 }
